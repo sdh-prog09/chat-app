@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InTouch-chat</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <h2>InTouch Chatapp</h2>
+    <!-- <div id="user-info"></div> -->
+    <input type="text" id="search-bar" placeholder="Search users..." />
+    <div id="user-list"></div>
+
+    <div id="chat-box" style="display:none;">
+        <h3>Chat with <span id="chat-with"></span></h3>
+        <div id="messages" ></div>
+        <input type="text" id="message-input" placeholder="Type a message" />
+        <button id="send-btn">Send</button>
+    </div>
+    <hr> 
+    <button id="logout-btn">Logout</button>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+
+    <div id="disclaimer" class="disclaimer">
+        <strong>🛡️ Chat Disclaimer:</strong>
+        <ul>
+          <li>🔐 Messages are end-to-end encrypted.</li>
+          <li>🧹 We do not store any messages on our servers.</li>
+          <li>📶 Messages can only be delivered if the recipient is online.</li>
+          <li>⏳ If the user is offline, your message will not be delivered.</li>
+        </ul>
+        <button class="close-btn" onclick="closeDisclaimer()">✖️</button>
+      </div>
+      
+</body>
+</html>
